@@ -1,0 +1,66 @@
+# ==============================================================================
+# TRINETRA — Git Ignore Configuration
+# SIH 2026 Prototype • Problem Statement ID: SIH26187
+# ==============================================================================
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# PyInstaller Build & Executable Artifacts
+# Note: Binaries exceeding GitHub's 100MB limit should be hosted on GitHub Releases
+dist/
+build/
+*.spec.bak
+*.zip
+*.tar.gz
+*.7z
+
+# Heavy CCTV Surveillance Datasets (>100MB VIRAT clips prohibited on GitHub)
+CCTV 01/
+*.avi
+*.mov
+*.mkv
+
+# Preserve lightweight synthetic border demo footage (580KB)
+!data/videos/sample_border_surveillance.mp4
+
+# Pytest & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE & OS Artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Runtime Generated Evidence & Logs (Keep repo clean)
+data/evidence/*.mp4
+data/thumbnails/*.jpg
+data/reports/*.pdf
+data/logs/*.log
+data/logs/*.jsonl
+data/database/*.db-journal
+data/database/*.db-wal
+data/database/*.db-shm
+
+# Ensure base templates, keys, and cascades remain committed
+!data/database/trinetra.db
+!data/authorized_faces/
+!data/keys/
+!data/haarcascades/
